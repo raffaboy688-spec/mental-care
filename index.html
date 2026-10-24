@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173b68">
+  <meta name="description" content="Platform refleksi kesehatan mental dan panduan mencari dukungan.">
+  <title>MentalCare — Dashboard Kesehatan Mental</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" id="brandHome">
+      <span class="brand-logo">M</span>
+      <span>
+        <strong>MentalCare</strong>
+        <small>Ruang refleksi diri</small>
+      </span>
+    </a>
+    <span class="topbar-label"><span class="status-dot"></span> Edukasi & refleksi</span>
+  </header>
+
+  <main class="page">
+    <!-- DASHBOARD PEMBUKA -->
+    <section id="dashboard" class="dashboard">
+      <div class="welcome-banner">
+        <div class="welcome-copy">
+          <span class="eyebrow">SELAMAT DATANG DI MENTALCARE</span>
+          <h1>Luangkan waktu untuk <span>memahami dirimu.</span></h1>
+          <p>
+            Kenali perasaan, kebiasaan, dan hubungan sosialmu melalui
+            refleksi sederhana. Tidak ada jawaban yang membuatmu menjadi
+            pribadi yang buruk.
+          </p>
+          <button id="startTest" class="btn btn-primary btn-large">
+            Mulai Tes <span aria-hidden="true">→</span>
+          </button>
+          <p class="privacy-line">🔒 Jawaban diproses di browser dan tidak dikirim ke server.</p>
+        </div>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-heart">♡</div>
+          <span class="art-star star-one">✦</span>
+          <span class="art-star star-two">✧</span>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">DASHBOARD</span>
+          <h2>Gambaran tes kesehatan mental</h2>
+          <p>Kenali tahapan dan hal yang akan kamu refleksikan.</p>
+        </div>
+      </div>
+
+      <div class="overview-grid">
+        <article class="overview-card">
+          <div class="overview-icon blue">☀</div>
+          <span class="card-kicker">BAGIAN 01</span>
+          <h3>Suasana hati</h3>
+          <p>
+            Membantu merefleksikan perubahan minat, perasaan sedih,
+            tidur, energi, nafsu makan, dan konsentrasi selama dua minggu
+            terakhir.
+          </p>
+          <span class="card-meta">9 pertanyaan · Skor 0–27</span>
+        </article>
+
+        <article class="overview-card">
+          <div class="overview-icon purple">☁</div>
+          <span class="card-kicker">BAGIAN 02</span>
+          <h3>Hubungan sosial</h3>
+          <p>
+            Menggali pengalaman merasa dekat dengan orang lain,
+            diterima dalam kelompok, dipahami, atau merasa sendirian.
+          </p>
+          <span class="card-meta">20 pertanyaan · Skor 20–80</span>
+        </article>
+
+        <article class="overview-card">
+          <div class="overview-icon green">♡</div>
+          <span class="card-kicker">BAGIAN 03</span>
+          <h3>Dukungan dan keseharian</h3>
+          <p>
+            Memeriksa pengaruh perasaan terhadap kegiatan sehari-hari,
+            dukungan yang tersedia, dan kebutuhan keselamatan diri.
+          </p>
+          <span class="card-meta">Pertanyaan tambahan</span>
+        </article>
+      </div>
+
+      <div class="dashboard-columns">
+        <article class="panel">
+          <span class="eyebrow">SEBELUM MEMULAI</span>
+          <h2>Bagaimana cara mengikuti tes?</h2>
+          <div class="steps">
+            <div class="step">
+              <span>01</span>
+              <div>
+                <strong>Jawab sesuai pengalaman</strong>
+                <p>Pilih jawaban yang paling mendekati keadaanmu, bukan jawaban yang menurutmu diharapkan orang lain.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>02</span>
+              <div>
+                <strong>Perhatikan periode waktu</strong>
+                <p>Untuk pertanyaan suasana hati, pikirkan pengalaman selama dua minggu terakhir. Untuk hubungan sosial, perhatikan pengalamanmu secara umum sesuai petunjuk.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>03</span>
+              <div>
+                <strong>Pahami hasil dengan bijak</strong>
+                <p>Skor adalah gambaran terbatas dari jawabanmu, bukan diagnosis dan bukan ukuran nilai dirimu.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel range-panel">
+          <span class="eyebrow">PANDUAN HASIL</span>
+          <h2>Apa arti rentang skor?</h2>
+          <p>
+            Rentang membantu mengelompokkan jawaban menjadi kategori
+            untuk memandu refleksi dan menentukan langkah berikutnya.
+          </p>
+          <div class="range-example">
+            <div class="range-example-top">
+              <strong>Suasana hati</strong>
+              <span>0–27</span>
+            </div>
+            <div class="range-strip mood-strip">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="range-legend">
+              <span>Minimal</span><span>Ringan</span><span>Sedang</span><span>Lebih tinggi</span>
+            </div>
+          </div>
+          <div class="range-example">
+            <div class="range-example-top">
+              <strong>Hubungan sosial</strong>
+              <span>20–80</span>
+            </div>
+            <div class="range-strip social-strip">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <p class="small-muted">
+              Rentang hubungan sosial pada prototipe ini bersifat deskriptif
+              dan belum menjadi batas klinis tervalidasi.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <article class="important-note">
+        <div class="note-icon">i</div>
+        <div>
+          <h3>Informasi penting sebelum tes</h3>
+          <p>
+            MentalCare adalah prototipe edukasi, bukan alat diagnosis.
+            Kategori skor suasana hati mengikuti pembagian skor PHQ-9
+            sebagai referensi, tetapi pertanyaan perlu diverifikasi dengan
+            instrumen tervalidasi sebelum digunakan secara resmi.
+            Hasil tidak dapat memastikan seseorang memiliki gangguan mental.
+          </p>
+        </div>
+      </article>
+
+      <div class="dashboard-bottom">
+        <div>
+          <h2>Siap melakukan refleksi diri?</h2>
+          <p>Jawab dengan tenang. Kamu boleh berhenti kapan saja.</p>
+        </div>
+        <button id="startTestBottom" class="btn btn-primary">
+          Mulai Tes Sekarang →
+        </button>
+      </div>
+    </section>
+
+    <!-- HALAMAN TES -->
+    <section id="testPage" class="hidden">
+      <button id="backDashboard" class="back-link">← Kembali ke dashboard</button>
+
+      <div class="test-intro">
+        <span class="eyebrow">REFLEKSI DIRI</span>
+        <h1>Kenali pengalamanmu</h1>
+        <p>
+          Bacalah setiap pertanyaan. Pilih jawaban yang paling sesuai
+          dengan pengalamanmu. Jawabanmu tidak disimpan setelah halaman
+          ditutup atau dimuat ulang.
+        </p>
+      </div>
+
+      <div class="progress-card">
+        <div class="progress-info">
+          <span id="progressLabel">Bagian 1 dari 3</span>
+          <span id="progressPercent">33%</span>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <form id="mentalForm" novalidate>
+        <section class="test-section active" data-section="0">
+          <div class="section-heading">
+            <span class="section-number">01</span>
+            <div>
+              <h2>Suasana hati dan aktivitas</h2>
+              <p>Pikirkan pengalamanmu selama dua minggu terakhir.</p>
+            </div>
+          </div>
+
+          <div class="scale-guide">
+            <strong>Seberapa sering kamu mengalami hal berikut?</strong>
+            <div class="scale-options">
+              <span>0 · Tidak pernah</span>
+              <span>1 · Beberapa hari</span>
+              <span>2 · Lebih dari separuh hari</span>
+              <span>3 · Hampir setiap hari</span>
+            </div>
+          </div>
+
+          <div id="moodQuestions"></div>
+
+          <fieldset class="question-card">
+            <legend>
+              Seberapa besar pengalaman tersebut mengganggu kegiatanmu,
+              seperti belajar, mengerjakan tugas, mengurus diri, atau
+              berinteraksi dengan orang lain?
+            </legend>
+            <p class="question-help">
+              Pertanyaan ini merupakan informasi tambahan dan tidak
+              dimasukkan ke skor suasana hati.
+            </p>
+            <div class="choice-list two-columns">
+              <label class="choice"><input type="radio" name="impact" value="0" required><span>Tidak mengganggu</span></label>
+              <label class="choice"><input type="radio" name="impact" value="1"><span>Sedikit mengganggu</span></label>
+              <label class="choice"><input type="radio" name="impact" value="2"><span>Sangat mengganggu</span></label>
+              <label class="choice"><input type="radio" name="impact" value="3"><span>Sangat sulit menjalani kegiatan</span></label>
+            </div>
+          </fieldset>
+
+          <div class="section-actions">
+            <span class="required-note">Jawab semua pertanyaan bertanda wajib.</span>
+            <button type="button" class="btn btn-primary" data-next>Lanjutkan →</button>
+          </div>
+        </section>
+
+        <section class="test-section" data-section="1">
+          <div class="section-heading">
+            <span class="section-number">02</span>
+            <div>
+              <h2>Hubungan sosial dan kesepian</h2>
+              <p>Refleksikan pengalamanmu dalam hubungan dengan orang lain.</p>
+            </div>
+          </div>
+
+          <div class="context-card">
+            <h3>Apa yang dimaksud dengan kesepian?</h3>
+            <p>
+              Kesepian adalah perasaan ketika hubungan sosial yang dimiliki
+              terasa kurang sesuai dengan hubungan yang dibutuhkan. Seseorang
+              bisa merasa kesepian meskipun sedang berada di tengah banyak orang.
+              Perasaan ini tidak selalu berarti seseorang tidak memiliki teman.
+            </p>
+          </div>
+
+          <div class="scale-guide">
+            <strong>Seberapa sering pernyataan berikut sesuai dengan pengalamanmu?</strong>
+            <div class="scale-options">
+              <span>1 · Tidak pernah</span>
+              <span>2 · Jarang</span>
+              <span>3 · Kadang-kadang</span>
+              <span>4 · Selalu</span>
+            </div>
+          </div>
+
+          <div id="lonelyQuestions"></div>
+
+          <div class="section-actions">
+            <button type="button" class="btn btn-secondary" data-prev>← Kembali</button>
+            <button type="button" class="btn btn-primary" data-next>Lanjutkan →</button>
+          </div>
+        </section>
+
+        <section class="test-section" data-section="2">
+          <div class="section-heading">
+            <span class="section-number">03</span>
+            <div>
+              <h2>Dukungan dan keselamatan diri</h2>
+              <p>Jawaban ini membantu memberikan saran tindak lanjut yang sesuai.</p>
+            </div>
+          </div>
+
+          <div class="context-card">
+            <h3>Mengapa bagian ini diperlukan?</h3>
+            <p>
+              Skor tidak selalu menggambarkan seluruh situasi. Dua orang
+              dengan skor sama mungkin memiliki kebutuhan berbeda. Karena
+              itu, penting untuk mengetahui apakah aktivitas sehari-hari
+              terganggu dan apakah ada dukungan yang bisa dihubungi.
+            </p>
+          </div>
+
+          <fieldset class="question-card">
+            <legend>1. Apakah kamu memiliki seseorang yang kamu percaya untuk diajak berbicara ketika menghadapi masalah?</legend>
+            <div class="choice-list two-columns">
+              <label class="choice"><input type="radio" name="support" value="yes" required><span>Ya, ada</span></label>
+              <label class="choice"><input type="radio" name="support" value="sometimes"><span>Kadang-kadang</span></label>
+              <label class="choice"><input type="radio" name="support" value="no"><span>Belum ada</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="question-card">
+            <legend>2. Apakah akhir-akhir ini kamu pernah sengaja melakukan sesuatu yang membahayakan dirimu?</legend>
+            <p class="question-help">Kamu tidak perlu menceritakan detail pengalaman tersebut.</p>
+            <div class="choice-list two-columns">
+              <label class="choice"><input type="radio" name="pastRisk" value="yes" required><span>Ya</span></label>
+              <label class="choice"><input type="radio" name="pastRisk" value="no"><span>Tidak</span></label>
+              <label class="choice"><input type="radio" name="pastRisk" value="prefer" ><span>Tidak ingin menjawab</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="question-card">
+            <legend>3. Saat ini, apakah kamu merasa tidak aman atau khawatir mungkin akan menyakiti dirimu sendiri?</legend>
+            <div class="choice-list two-columns">
+              <label class="choice"><input type="radio" name="currentRisk" value="yes" required><span>Ya</span></label>
+              <label class="choice"><input type="radio" name="currentRisk" value="no"><span>Tidak</span></label>
+              <label class="choice"><input type="radio" name="currentRisk" value="prefer"><span>Tidak ingin menjawab</span></label>
+            </div>
+          </fieldset>
+
+          <div class="support-reminder">
+            Jika kamu merasa tidak aman sekarang, jangan menunggu hasil tes.
+            Segera beri tahu orang dewasa tepercaya dan minta bantuan langsung.
+          </div>
+
+          <div class="section-actions">
+            <button type="button" class="btn btn-secondary" data-prev>← Kembali</button>
+            <button type="submit" class="btn btn-primary">Lihat Hasil ✓</button>
+          </div>
+        </section>
+      </form>
+    </section>
+
+    <!-- HASIL -->
+    <section id="results" class="hidden">
+      <button id="backToDashboardFromResults" class="back-link">← Kembali ke dashboard</button>
+
+      <div class="result-header">
+        <span class="eyebrow">RINGKASAN REFLEKSI</span>
+        <h1>Hasil refleksimu</h1>
+        <p>Gunakan hasil ini sebagai bahan memahami kebutuhanmu, bukan sebagai label.</p>
+      </div>
+
+      <div id="safetyResult" class="hidden" aria-live="polite"></div>
+
+      <div class="result-grid">
+        <article class="result-card">
+          <div class="overview-icon blue">☀</div>
+          <h2>Suasana hati</h2>
+          <p class="result-score" id="moodScore">—</p>
+          <span class="result-level" id="moodLevel">—</span>
+          <p id="moodDescription" class="result-description"></p>
+          <div class="range-track"><div id="moodRange" class="range-fill"></div></div>
+          <p class="small-muted">Rentang skor 0–27</p>
+        </article>
+
+        <article class="result-card">
+          <div class="overview-icon purple">☁</div>
+          <h2>Hubungan sosial</h2>
+          <p class="result-score" id="lonelyScore">—</p>
+          <span class="result-level" id="lonelyLevel">—</span>
+          <p id="lonelyDescription" class="result-description"></p>
+          <div class="range-track"><div id="lonelyRange" class="range-fill"></div></div>
+          <p class="small-muted">Rentang skor 20–80; kategori deskriptif</p>
+        </article>
+      </div>
+
+      <article class="result-card impact-result">
+        <span class="eyebrow">KESEHARIAN DAN DUKUNGAN</span>
+        <h2>Hal yang perlu diperhatikan</h2>
+        <p id="impactDescription"></p>
+        <p id="supportDescription"></p>
+      </article>
+
+      <article class="result-card recommendation-card">
+        <span class="eyebrow">LANGKAH BERIKUTNYA</span>
+        <h2>Rekomendasi tindak lanjut</h2>
+        <ul id="recommendations"></ul>
+      </article>
+
+      <div class="important-note">
+        <div class="note-icon">i</div>
+        <div>
+          <h3>Interpretasikan hasil dengan bijak</h3>
+          <p>
+            Kategori skor suasana hati menggunakan rentang PHQ-9 sebagai
+            acuan, tetapi versi pertanyaan ini perlu diverifikasi sebelum
+            dipakai sebagai instrumen resmi. Kategori hubungan sosial
+            merupakan rentang deskriptif prototipe, bukan batas klinis
+            tervalidasi. Jika mengalami kesulitan, bicaralah dengan orang
+            dewasa tepercaya, guru BK, psikolog, atau tenaga kesehatan.
+          </p>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button id="printBtn" class="btn btn-secondary">Cetak hasil</button>
+        <button id="restartBtn" class="btn btn-primary">Kembali ke dashboard ↻</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <strong>MentalCare</strong>
+      <p>Platform edukasi dan refleksi kesehatan mental.</p>
+      <p>Hasil bukan diagnosis dan tidak menggantikan konsultasi profesional.</p>
+    </footer>
+  </main>
+</body>
+</html>
